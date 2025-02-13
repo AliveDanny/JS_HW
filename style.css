@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.todolist-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(15, 83, 160);
+    color: #fff;
+    font-size: 20px;
+}
+
+.todolist-header:hover {
+    cursor: pointer;
+}
+
+.todo-input {
+    width: 85%;
+    
+}
+
+input[type="text"] {
+    width: 90%;
+    text-decoration: wavy;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.task.completed {
+    text-decoration: line-through;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
