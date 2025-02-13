@@ -32,11 +32,6 @@ body {
     cursor: pointer;
 }
 
-.todo-input {
-    width: 85%;
-    
-}
-
 input[type="text"] {
     width: 90%;
     text-decoration: wavy;
