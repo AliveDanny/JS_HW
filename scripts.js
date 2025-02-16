@@ -24,6 +24,8 @@ clickme.addEventListener('click', function GetToDoList (event) {
 
             const taskLabel = document.createElement('span');
             taskLabel.textContent = taskText;
+            taskLabel.setAttribute('id', 'txt')
+            
 
             checkbox.addEventListener('change', function () {
                 task.classList.toggle('completed', checkbox.checked);
@@ -33,9 +35,53 @@ clickme.addEventListener('click', function GetToDoList (event) {
             task.appendChild(taskLabel);
             taskList.appendChild(task);
         }
-    });
-    
+    /** 
+ * 
+ *  @param {string} textSelector 
+ */
+const textEdit = (textSelector) => {
+    const textElements = document.querySelectorAll(textSelector)
+/**
+ * 
+ * @param{HTMLElement} textElement
+ */
+    const textContentEdit = (textElement) => {
+        textElement.addEventListener('dblclick', function () {
+            this.contentEditable = true
+        })
+
+        textElement.addEventListener('keydown', function (event) {
+            if (event.altKey && event.key === 'Enter'){
+                this.contentEditable = false
+            }
+        })
+    }
+    textElements.forEach(textContentEdit)
+}
+textEdit('#txt')
+});
 }, {once: true})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
