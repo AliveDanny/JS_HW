@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+}
+
+.accordeon-container {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+.accordeon__item {
+    border-bottom: 3px solid #cdcdcd;
+}
+
+.accordeon__title {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background: #dbdada95;
+
+    &:hover {
+        background: #cdcdcd;
+    }
+}
+
+.accordeon__content {
+    overflow: hidden;
+    transition: line-height .3s;
+    display: grid;
+    line-height: 0;
+
+    * {
+        padding: 0;
+    }
+}
+
+.accordeon__title.active + .accordeon__content {
+    line-height: 1;
+
+    * {
+        padding: 5px;
+    }
+}
